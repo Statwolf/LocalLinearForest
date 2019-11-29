@@ -1,0 +1,8 @@
+version: '3'
+services:
+  develop:
+    volumes:
+      - '.:/usr/local/lib/python3.6/site-packages/llf'
+    image: 'statwolf/llf:0.0.0'
+    build: '.'
+    command: 'bash -c "cd /usr/local/lib/python3.6/site-packages/llf && make _develop"'
