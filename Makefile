@@ -10,7 +10,7 @@ freeze:
 	pip freeze | grep -v tensorflow > deps.txt
 
 _develop:
-	while inotifywait -r -e create,modify ./data_science --exclude ''\\.pyc$$''; do make test; done
+	while inotifywait -r -e create,modify ./modules --exclude ''\\.pyc$$''; do make test; done
 
 develop:
 	docker-compose up --build
